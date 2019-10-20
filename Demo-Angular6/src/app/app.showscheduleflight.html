@@ -1,0 +1,22 @@
+
+<h1>{{showScheduleFlights()}}</h1>
+<table border="1">
+    <tr>
+        <th>Schedule Flight Number</th>
+        <th>Source Airport</th>
+        <th>Destination Airport</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Ticket Cost</th>
+    </tr>
+    <tr *ngFor="let sf of scheduleFlights">
+        <td>{{sf.scheduleFlightId}}</td>
+        <td>{{sf.sourceAirport}}</td>
+        <td>{{sf.destinationAirport}}</td>
+        <td>{{sf.departureDateTime}}</td>
+        <td>{{sf.arrivalDateTime}}</td>
+        <td>{{sf.ticketCost}}</td>
+        
+        
+    </tr>
+    </table>
