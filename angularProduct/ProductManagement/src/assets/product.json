@@ -1,0 +1,17 @@
+[
+{
+"prodId" : 1004,
+"prodName":"iphone",
+"prodPrice":77
+},
+{
+    "prodId" : 1003,
+    "prodName":"vivo",
+    "prodPrice":77
+},
+{
+    "prodId" : 1004,
+        "prodName":"oppo",
+        "prodPrice":77
+}
+]

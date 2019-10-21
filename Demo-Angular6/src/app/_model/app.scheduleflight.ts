@@ -1,8 +1,11 @@
+import { Flight } from "./app.flight";
+import { Schedule } from "./app.schedule";
+
 export class ScheduleFlight{
     scheduleFlightId:number;
-    sourceAirport:string;
-    destinationAirport:string;
-    departureDateTime:Date;
-    arrivalDateTime:Date;
+    flight:Flight;
+    availableSeats:number;
+    schedule:Schedule;
     ticketCost:number;
+    scheduleFlightState:boolean;
 }

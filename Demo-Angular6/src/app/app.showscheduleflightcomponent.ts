@@ -18,10 +18,6 @@ export class ShowScheduleFlightComponent implements OnInit{
         
     }
     ngOnInit() {
-        
-            //this.parameter=params})
-            this.service.showScheduleFlights().subscribe((data:ScheduleFlight[])=>this.scheduleFlights=data);
-            //console.log(this.scheduleFlights.length)
     }
     showScheduleFlights(){
         this.service.showScheduleFlights().subscribe((data:ScheduleFlight[])=>this.scheduleFlights=data);
