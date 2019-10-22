@@ -10,20 +10,14 @@ export class ScheduleFlightService{
     constructor(private myhttp:HttpClient){}
 
     showScheduleFlights(){
-       return this.myhttp.get("http://localhost:9088/showdata");
+       return this.myhttp.get("http://localhost:9088/scheduleFlight/showdata");
     }
 
     addScheduleFlight(scheduleFlight:ScheduleFlight){
-       //let form = new FormData();
-       //form.append("Flight Number",data.scheduleFlightNumber);
-       //form.append("Source Airport",data.sourceAirport);
-       /*form.append("Destination Airport",data.destinationAirport);
-       form.append("Departure Time",data.departureTime);
-       form.append("Arrival Time",data.arrivalTime);
-       form.append("Ticket Cost",data.ticketCost);*/
-       return this.myhttp.post<ScheduleFlight>("http://localhost:9088/add",scheduleFlight);
+       return this.myhttp.post<ScheduleFlight>("http://localhost:9088/scheduleFlight/add",scheduleFlight);
     }
     
+<<<<<<< HEAD
     modifyScheduleFlight(scheduleFlight:ScheduleFlight){
        
         return this.myhttp.put("http://localhost:9088/modify",scheduleFlight);
@@ -37,5 +31,18 @@ export class ScheduleFlightService{
        console.log("deleting");
        console.log(scheduleFlightNumber);
        return this.myhttp.delete("http://localhost:9088/delete"+scheduleFlightNumber);
+=======
+    modifyScheduleFlight(data:any){
+   
+        return this.myhttp.put("http://localhost:9088/scheduleFlight/modify",data);
+    }
+    searchScheduleFlight(data:any){
+        
+        return this.myhttp.get("http://localhost:9088/scheduleFlight/search",data);
+    }
+
+    removeScheduleFlight(data:any){
+       return this.myhttp.delete("http://localhost:9088/scheduleFlight/delete"+data);
+>>>>>>> 3e6b32de6e92a6d17442a26e928aa4768468cbff
     }
 }
