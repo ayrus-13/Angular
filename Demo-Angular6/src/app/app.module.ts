@@ -5,6 +5,9 @@ import{FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http'; 
 import { AddScheduleFlightComponent } from './app.addscheduleflightcomponent';
 import { ShowScheduleFlightComponent } from './app.showscheduleflightcomponent';
+import { SearchScheduleFlightComponent } from './app.searchscheduleflightcomponent';
+import { ModifyScheduleFlightComponent } from './app.modifyscheduleflightcomponent';
+import { DeleteScheduleFlightComponent } from './app.deletescheduleflightcomponent';
 
 
 @NgModule({
@@ -16,7 +19,11 @@ import { ShowScheduleFlightComponent } from './app.showscheduleflightcomponent';
     declarations: [
         AppComponent,
         AddScheduleFlightComponent,
-        ShowScheduleFlightComponent
+        ShowScheduleFlightComponent,
+        SearchScheduleFlightComponent,
+        ModifyScheduleFlightComponent,
+        DeleteScheduleFlightComponent
+
 		],
     providers: [ ],
     bootstrap: [AppComponent]

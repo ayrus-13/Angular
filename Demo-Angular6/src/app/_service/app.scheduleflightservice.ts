@@ -24,18 +24,18 @@ export class ScheduleFlightService{
        return this.myhttp.post<ScheduleFlight>("http://localhost:9088/add",scheduleFlight);
     }
     
-    /*modifyScheduleFlight(data:any){
-        console.log(data);
-        return this.myhttp.modify();
+    modifyScheduleFlight(scheduleFlight:ScheduleFlight){
+       
+        return this.myhttp.put("http://localhost:9088/modify",scheduleFlight);
     }
-    searchScheduleFlight(data:any){
+    /*searchScheduleFlight(data:any){
         console.log(data);
         return this.myhttp.search();
-    }
-
-    removeScheduleFlight(data:any){
-       console.log("deleting");
-       console.log(data);
-       return this.myhttp.delete(""+data);
     }*/
+
+    removeScheduleFlight(scheduleFlightNumber:number){
+       console.log("deleting");
+       console.log(scheduleFlightNumber);
+       return this.myhttp.delete("http://localhost:9088/delete"+scheduleFlightNumber);
+    }
 }
